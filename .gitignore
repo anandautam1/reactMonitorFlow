@@ -10,7 +10,7 @@
 /build
 
 # hide config
-/config
+src/config
 
 # misc
 .DS_Store
