@@ -53,27 +53,14 @@ class ToDoList extends Component {
     renderToDos() {
         const { data } = this.props;
         const toDos = _.map(data, (value, key) => {
+          //console.log(data);
+          //console.log(data.PH);
           let item = (
             <div>
               <Grid container spacing={24}>
                 <ToDoListItem key={key} todoId={key} todo={value}/>
-                <Grid item xs={6}>
+                <Grid item xs={24}>
                   <StatusList key={key} todoId={key} todo={value}/>
-                </Grid>
-                <Grid item xs={6}>
-                  <StatusList key={key} todoId={key} todo={value}/>
-                </Grid>
-                <Grid item xs={6}>
-                  <AquaChart value={7} label={'PH'} colour={'#000080'} />
-                </Grid>
-                <Grid item xs={6}>
-                  <AquaChart value={7} label={'temperature'} colour={'#F54029'} />
-                </Grid>
-                <Grid item xs={6}>
-                  <AquaChart value={7} label={'salinity'} colour={'#FFCC33'} />
-                </Grid>
-                <Grid item xs={6}>
-                  <AquaChart value={7} label={'battery_level'} colour={'#50C878'} />
                 </Grid>
               </Grid>
             </div>
