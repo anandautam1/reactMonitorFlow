@@ -14,7 +14,6 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 
-
 class App extends Component {
   componentWillMount(){
     this.props.fetchUser();
@@ -37,6 +36,8 @@ class App extends Component {
             </Typography>
           </Toolbar>
         </AppBar>
+
+        {/* <GaugeData /> */}
 
         <BrowserRouter>
           <div className="container">

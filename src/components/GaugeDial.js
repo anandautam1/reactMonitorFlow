@@ -19,12 +19,11 @@ import Paper from '@material-ui/core/Paper';
     }
 
     render() {
-        const { propStop, rgbString } = this.state;
         return (
           <div
             style={{
               width: '100%',
-              height: '230px',
+              height: '260px',
               paddingTop: '20px',
               paddingBottom: '20px',
             }}

@@ -1,9 +1,9 @@
-// https://www.npmjs.com/package/react-weather
 import React, { Component } from "react";
+import ReactWeather from 'react-open-weather';
+import 'react-open-weather/lib/css/ReactWeather.css';
 import Paper from '@material-ui/core/Paper';
-import { OpenWeatherMap } from 'react-weather';
 
-class WeatherComponent extends Component {
+class WeatherWidget extends Component {
     constructor(props){
         super(props);
         this.state = {
@@ -18,13 +18,14 @@ class WeatherComponent extends Component {
                     <h5 style={{textAlign:'center', padding:'10px'}}>{this.state.label}</h5>
                 </Paper>
 
-                <OpenWeatherMap 
-                    city="Jerusalem" 
-                    country="IL" 
-                    appid="f2e867d2d24279f6eb9447f5e3b031ca" />
+                <ReactWeather
+                    forecast="today"
+                    apikey="0deb77e07fc8455fa9960903181709"
+                    type="city"
+                    city="Melbourne"/>
             </div>
         );
     }
 }
 
-export default WeatherComponent;
+export default WeatherWidget;

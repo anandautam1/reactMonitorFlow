@@ -5,7 +5,6 @@ import _ from "lodash";
 import * as actions from "../actions";
 // component
 import ToDoListItem from "./ToDoListItem";
-import AquaChart from "./AquaChart";
 import Grid from '@material-ui/core/Grid';
 import logo from './../logo.svg';
 import StatusList from "./StatusList";
@@ -73,7 +72,7 @@ class ToDoList extends Component {
         return (
           <div className="col s10 offset-s1 center-align">
            <img src={logo} className="App-logo" alt="logo" />
-            <h4>You have completed all the tasks</h4>
+            <h4>There are no active sensor at the moment</h4>
             <p>Start by clicking add button in the bottom of the screen</p>
           </div>
         );
@@ -91,6 +90,7 @@ class ToDoList extends Component {
               {this.renderAddForm()}
               {this.renderToDos()}
             </div>
+            
             <div className="fixed-action-btn">
               <button
                 onClick={() => this.setState({ addFormVisible: !addFormVisible })}

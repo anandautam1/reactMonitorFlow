@@ -1,5 +1,6 @@
+import axios from 'axios';
 import { todosRef, authRef,provider } from "../config/firebase";
-import { FETCH_TODOS, FETCH_USER } from "./types";
+import { FETCH_TODOS, FETCH_USER, FETCH_WEATHER } from "./types";
 
 export const addToDo = newToDo => async dispatch => {
   todosRef.push().set(newToDo);
@@ -53,3 +54,19 @@ export const fetchUser = () => dispatch => {
         console.log(error);
       });
   };
+
+// additional weather request
+const API_KEY='f2e867d2d24279f6eb9447f5e3b031ca';
+const ROOT_URL = `http://api.openweathermap.org/data/2.5/forecast?appid=${API_KEY}`;
+
+  export function fetchWeather(city) {
+    const url =`${ROOT_URL}&q=${city},us`;
+    const request = axios.get(url);
+  
+    return {
+      type: FETCH_WEATHER,
+      payload: request
+    }
+  
+  }
+  
