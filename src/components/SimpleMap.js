@@ -11,7 +11,7 @@ class SimpleMap extends Component {
                 lat: this.props.lat,
                 lng: this.props.lng,
               },
-            zoom: 11
+            zoom: 1
         };
     }  
  

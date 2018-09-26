@@ -1,14 +1,27 @@
 import axios from 'axios';
-import { todosRef, authRef,provider } from "../config/firebase";
-import { FETCH_TODOS, FETCH_USER, FETCH_WEATHER } from "./types";
+import { todosRef, authRef, provider, zigflowData } from "../config/firebase";
+import { FETCH_TODOS, FETCH_USER, FETCH_WEATHER, UPDATE_CONTROL } from "./types";
 
 export const addToDo = newToDo => async dispatch => {
   todosRef.push().set(newToDo);
 };
 
 export const completeToDo = completeToDoId => async dispatch => {
-  todosRef.child(completeToDoId).remove();
+  //todosRef.child(completeToDoId).remove();
+  // console.log("ananda is cool");
+  // console.log(todosRef);
+  // console.log(zigflowData);
+  if(completeToDoId == 1){
+    zigflowData.update({control:{clusterID:10, task:"on"}});
+  }
+  else if(completeToDoId == 2){
+    zigflowData.update({control:{clusterID:10, task:"off"}});
+  }
 };
+
+export const controlUpdate = completeToDoId => async dispatch => {
+  zigflowData.update({control:{clusterID:10, task:"on"}});
+}
 
 export const fetchToDos = () => async dispatch => {
   todosRef.on("value", snapshot => {

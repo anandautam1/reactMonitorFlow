@@ -29,7 +29,7 @@ class StatusList extends Component {
         const { todo , content} = this.props;
         // debug infor only
         //console.log(todo);
-        console.log(todo.temperature);
+        console.log(todo.sal);
         // if(todo.hasOwnProperty('PH')){
         //     this.setState({ 
         //         PH: todo.PH[0] 
@@ -94,7 +94,7 @@ class StatusList extends Component {
                     <Grid item xs={6}>
                         <div>
                             <GaugeDial label={'water_level (m)'} 
-                            minValue={-50} 
+                            minValue={0} 
                             maxValue={50} 
                             value={Number(todo.water)}
                             segments={5}
@@ -109,7 +109,7 @@ class StatusList extends Component {
                             <GaugeDial label={'salinity (g)'} 
                             minValue={0} 
                             maxValue={2000} 
-                            value={Number(todo.salinity)}
+                            value={Number(todo.sal)}
                             segments={3}
                             needleColor={"#000000"}
                             startColor={'#008080'}

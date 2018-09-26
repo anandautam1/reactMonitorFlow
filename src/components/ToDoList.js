@@ -5,9 +5,11 @@ import _ from "lodash";
 import * as actions from "../actions";
 // component
 import ToDoListItem from "./ToDoListItem";
+import ControlButton from "./ControlButton";
 import Grid from '@material-ui/core/Grid';
 import logo from './../logo.svg';
 import StatusList from "./StatusList";
+import Button from '@material-ui/core/Button';
 
 class ToDoList extends Component {
     state = {
@@ -34,7 +36,6 @@ class ToDoList extends Component {
                 <div id="todo-add-form" className="col s10 offset-s1">
                     <form onSubmit={this.handleFormSubmit}>
                         <div className="input-field">
-                        
                         <input
                             value={addFormValue}
                             onChange={this.handleInputChange}
@@ -59,6 +60,8 @@ class ToDoList extends Component {
               <Grid container spacing={24}>
                 <ToDoListItem key={key} todoId={key} todo={value}/>
                 <Grid item xs={24}>
+                  <ControlButton key={key} todoId={key} todo={value}/>
+                  <br/>
                   <StatusList key={key} todoId={key} todo={value}/>
                 </Grid>
               </Grid>
@@ -92,7 +95,7 @@ class ToDoList extends Component {
             </div>
             
             <div className="fixed-action-btn">
-              <button
+              <Button
                 onClick={() => this.setState({ addFormVisible: !addFormVisible })}
                 className="btn-floating btn-large teal darken-4"
               >
@@ -101,7 +104,8 @@ class ToDoList extends Component {
                 ) : (
                   <i className="large material-icons">add</i>
                 )}
-              </button>
+              </Button>
+              
             </div>
           </div>
         );
