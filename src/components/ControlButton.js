@@ -39,7 +39,7 @@ class ControlButton extends Component {
                     <Grid container spacing={12}>
                         <Grid item xs={12}>
                             <AppBar position="static" variant="contained" disabled color="primary">
-                                <h4>Valve Control</h4>
+                                <h4>Sensor Calibration</h4>
                                 <Button variant="contained" color="primary"
                                     onClick={() => this.handleCompleteClick(1)}>
                                     <ControlIcon />

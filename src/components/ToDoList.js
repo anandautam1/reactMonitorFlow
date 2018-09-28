@@ -8,6 +8,7 @@ import ToDoListItem from "./ToDoListItem";
 import ControlButton from "./ControlButton";
 import Grid from '@material-ui/core/Grid';
 import logo from './../logo.svg';
+import zigFlowLogo from './../zigflowLogo.svg';
 import StatusList from "./StatusList";
 import Button from '@material-ui/core/Button';
 
@@ -74,7 +75,7 @@ class ToDoList extends Component {
         }
         return (
           <div className="col s10 offset-s1 center-align">
-           <img src={logo} className="App-logo" alt="logo" />
+           <img src={zigFlowLogo} className="App-logo" alt="logo" />
             <h4>There are no active sensor at the moment</h4>
             <p>Start by clicking add button in the bottom of the screen</p>
           </div>

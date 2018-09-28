@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
+import zigflowLogo from './zigflowLogo.svg';
 import './App.css';
 
 import ToDoList from "./components/ToDoList";
@@ -29,7 +30,7 @@ class App extends Component {
         <AppBar position="static">
           <Toolbar variant="dense">
             <IconButton color="inherit" aria-label="Menu">
-              <img src={logo} width={35} height={40} />
+              <img src={zigflowLogo} width={35} height={40} />
             </IconButton>
             <Typography variant="title" color="inherit">
               DashBoard
