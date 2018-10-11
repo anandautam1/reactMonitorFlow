@@ -8,7 +8,7 @@ Zigbee network devices will be used in this project which implement a mesh type 
 For easy access on the logged parameters, the information is sent to a web page interface for the user to view the data in a readable and interactive manner without having to visit the waterway site. The measured water parameter information that was sent from each sensor was continuously sent to and  monitored from the web User Interface (UI).
 
 ## Infrastrucure
-![alt text](relative/assets/Infrastructure.png)
+![alt text](./assets/Infrastructure.png)
 
 ## THIS PROJECT REQUIRE FIREBASE DEPENDENCY
 Firebase connector is needed as it handles the login authenticatio before going in and check the actual data. 
