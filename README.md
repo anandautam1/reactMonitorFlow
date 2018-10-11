@@ -1,4 +1,6 @@
 # ReactMonitorFlow
+![alt text](./assets/Logo.png)
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Waterway monitoring can be a difficult task without a proper set of equipment. Ideally, the equipment used for monitoring should be lightweight and should have long battery life; Internet of Things (IoT) matches these criteria perfectly for waterway monitoring.
