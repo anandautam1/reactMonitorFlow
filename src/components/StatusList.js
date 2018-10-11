@@ -25,11 +25,24 @@ class StatusList extends Component {
         completeToDo(completeToDoId);
     };
 
+    
+
     render(){
         const { todo , content} = this.props;
         // debug infor only
         //console.log(todo);
-        console.log(todo.sal);
+
+        // const foo = 'some variable';
+        // console.log(foo.indexOf('var'));
+        // console.log(foo.endsWith('var'));
+        // console.log(foo.includes('var'));
+        // console.log(foo.slice('var'));
+        // if (foo.slice('var') != -1){  
+        //     console.log('hello'); 
+        //     return true;
+        // }
+
+
         // if(todo.hasOwnProperty('PH')){
         //     this.setState({ 
         //         PH: todo.PH[0] 

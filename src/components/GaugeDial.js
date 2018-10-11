@@ -31,14 +31,17 @@ import Paper from '@material-ui/core/Paper';
             <Paper>
                 <h5 style={{textAlign:'center', padding:'10px'}}>{this.state.label}</h5>
             </Paper>
-            <ReactSpeedomter 
-                value={this.props.value}
-                minValue={this.state.minValue}
-                maxValue={this.state.maxValue}
-                startColor={this.state.startColor}
-                needleColor={this.state.needleColor}
-                segments={this.state.segments}
-                endColor={this.state.endColor}/>
+            <br/>
+            <div style={{height: '100%'}}>
+              <ReactSpeedomter
+                  value={this.props.value}
+                  minValue={this.state.minValue}
+                  maxValue={this.state.maxValue}
+                  startColor={this.state.startColor}
+                  needleColor={this.state.needleColor}
+                  segments={this.state.segments}
+                  endColor={this.state.endColor}/>
+              </div>
           </div>
         );
       }
